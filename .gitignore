@@ -1,0 +1,50 @@
+# Unity Generated Files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Visual Studio / Rider Generated Files
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Unity Cache Files
+*.stackdump
+*.log
+*.bak
+*.swp
+*.lock
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Crash Reports
+sysinfo.txt
+
+# Exclude Auto-Generated Meta Files
+*.pidb.meta
+*.pdb.meta
+
+# Exclude Build Artifacts
+*.apk
+*.aab
+*.unitypackage
+
+# Exclude JetBrains Rider project files
+.idea/
