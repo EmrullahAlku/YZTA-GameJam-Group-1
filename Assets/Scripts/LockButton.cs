@@ -3,24 +3,37 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using NUnit.Framework;
 using UnityEngine;
-namespace LockButtonScript {
-public class LockButton : MonoBehaviour
+namespace LockButtonScript
 {
-    public bool isLocked;
-
-    public bool redKey = true;
-
-    public GameObject Door;
-
-    public void UnlockDoor()
+    public class LockButton : MonoBehaviour
     {
-        if (isLocked && redKey)
+        public bool isLocked;
+
+        public bool redKey = true;
+
+        public GameObject Door;
+
+        public void UnlockDoor()
         {
-            isLocked = !isLocked;
-            Door.GetComponent<DoorScript.Door>().OpenDoor();
+            if (isLocked && redKey)
+            {
+                isLocked = false;
+                Door.GetComponent<DoorScript.Door>().OpenDoor();
+            }
+            else if (!isLocked)
+            {
+                Door.GetComponent<DoorScript.Door>().OpenDoor();
+            }
+        }
+
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                UnlockDoor();
+            }
         }
     }
-}
 
-}
+    }
 

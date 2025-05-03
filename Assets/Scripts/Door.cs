@@ -8,66 +8,55 @@ namespace DoorScript
 
 
 public class Door : MonoBehaviour {
-	public bool open;
+        public bool open = false;                    
+        public GameObject LockButton;                
+        public float autoCloseDelay = 3.0f;          
+        private SkinnedMeshRenderer blendShape;      
 
-	public GameObject LockButton;
-	public float smooth = 1.0f;
-	float DoorOpenAngle = -90.0f;
-    float DoorCloseAngle = 0.0f;
-
-	public float autoCloseDelay = 3.0f;
-
-	private SkinnedMeshRenderer blendShape; 
-	
-	//public AudioSource asource;
-	//public AudioClip openDoor,closeDoor;
-	// Use this for initialization
-	void Start () {
-		//asource = GetComponent<AudioSource> ();
-		blendShape = GetComponent<SkinnedMeshRenderer>();
-
-		SetDoorKey(0);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (open)
-		{
-			SetDoorKey(1);
-		}
-		else
-		{
-			SetDoorKey(0);
-		}  
-	}
-
-	public void OpenDoor(){
-		if (!LockButton.GetComponent<LockButtonScript.LockButton>().isLocked) {
-			open = true;
-			GetComponent<Collider>().enabled = false;
-			//asource.clip = open?openDoor:closeDoor;
-			//asource.Play ();
-			StartCoroutine(AutoCloseDoor());
-		}
-		else {
-			Debug.Log ("Door is Locked");
-		}
-	}
-
-	private void SetDoorKey(float value)
+        void Start()
         {
-            if (blendShape != null)
+            blendShape = GetComponent<SkinnedMeshRenderer>();
+            SetDoorKey(0); 
+        }
+
+        void Update()
+        {
+          
+            SetDoorKey(open ? 1 : 0);
+        }
+
+        public void OpenDoor()
+        {
+            
+            var lockButton = LockButton.GetComponent<LockButtonScript.LockButton>();
+
+            if (lockButton != null && !lockButton.isLocked)
             {
-                blendShape.SetBlendShapeWeight(0, value * 100); // 0 ile 100 arasında bir değer ayarla
+                open = true;
+                GetComponent<Collider>().enabled = false;
+                StartCoroutine(AutoCloseDoor());
+            }
+            else
+            {
+                Debug.Log("Kapı kilitli! Şifre veya anahtar gerekiyor.");
             }
         }
 
-	private IEnumerator AutoCloseDoor()
+        private void SetDoorKey(float value)
+        {
+            if (blendShape != null)
+            {
+               
+                blendShape.SetBlendShapeWeight(0, value * 100);
+            }
+        }
+
+        private IEnumerator AutoCloseDoor()
         {
             yield return new WaitForSeconds(autoCloseDelay);
-			GetComponent<Collider>().enabled = true;
-
-            open = false; // Kapıyı kapat
+            open = false;
+            GetComponent<Collider>().enabled = true;
         }
-}
+    }
+
 }
