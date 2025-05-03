@@ -42,7 +42,8 @@ public class Door : MonoBehaviour {
 	}
 
 	public void OpenDoor(){
-		if (!LockButton.GetComponent<LockButtonScript.LockButton>().isLocked) {
+
+		if ( LockButton == null || !LockButton.GetComponent<LockButtonScript.LockButton>().isLocked) {
 			open = true;
 			GetComponent<Collider>().enabled = false;
 			//asource.clip = open?openDoor:closeDoor;
