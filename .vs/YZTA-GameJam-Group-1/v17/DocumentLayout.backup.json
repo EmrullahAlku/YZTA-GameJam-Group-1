@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\izzet\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{16588A58-5F41-8104-3DAF-F57BD1B6D9C9}|Assembly-CSharp.csproj|c:\\users\\izzet\\onedrive\\belgeler\\github\\yzta-gamejam-group-1\\assets\\scripts\\taskscript\\task4\\rightchoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16588A58-5F41-8104-3DAF-F57BD1B6D9C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\taskscript\\task4\\rightchoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{16588A58-5F41-8104-3DAF-F57BD1B6D9C9}|Assembly-CSharp.csproj|c:\\users\\izzet\\onedrive\\belgeler\\github\\yzta-gamejam-group-1\\assets\\scripts\\taskscript\\task3\\forecastcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16588A58-5F41-8104-3DAF-F57BD1B6D9C9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\taskscript\\task3\\forecastcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -171,19 +167,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RightChoice.cs",
-              "DocumentMoniker": "C:\\Users\\izzet\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\Assets\\Scripts\\TaskScript\\Task4\\RightChoice.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TaskScript\\Task4\\RightChoice.cs",
-              "ToolTip": "C:\\Users\\izzet\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\Assets\\Scripts\\TaskScript\\Task4\\RightChoice.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TaskScript\\Task4\\RightChoice.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T05:25:16.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "ForecastControl.cs",
               "DocumentMoniker": "C:\\Users\\izzet\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\Assets\\Scripts\\TaskScript\\Task3\\ForecastControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TaskScript\\Task3\\ForecastControl.cs",
@@ -196,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "SortingControl.cs",
               "DocumentMoniker": "C:\\Users\\izzet\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\Assets\\Scripts\\TaskScript\\Task2\\SortingControl.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TaskScript\\Task2\\SortingControl.cs",
@@ -208,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MatchController.cs",
               "DocumentMoniker": "C:\\Users\\izzet\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\Assets\\Scripts\\TaskScript\\Task1\\MatchController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TaskScript\\Task1\\MatchController.cs",
