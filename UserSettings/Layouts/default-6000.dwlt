@@ -21,7 +21,6 @@ MonoBehaviour:
     height: 989
 
     height: 997
-
   m_ShowMode: 4
   m_Title: Hierarchy
   m_RootView: {fileID: 6}
@@ -48,7 +47,6 @@ MonoBehaviour:
     x: 0
     y: 36
     width: 1920
-
     height: 933
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
@@ -142,7 +140,6 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-
     y: 653
     width: 1428
     height: 280
@@ -1303,9 +1300,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 23.433983, y: 5.879579, z: -0.06644553}
+    m_Target: {x: 2.2213242, y: -0.3578992, z: 4.570542}
     speed: 2
-    m_Value: {x: 15.1651, y: 34.384895, z: 61.18543}
+    m_Value: {x: -0.31139445, y: -0.26847494, z: 15.435635}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1353,11 +1350,11 @@ MonoBehaviour:
   m_Rotation:49
     m_Target: {x: 0.09547904, y: -0.64738446, z: 0.08217153, w: 0.75164104}
     speed: 2
-    m_Value: {x: -0.021885136, y: 0.96608824, z: 0.087178, w: 0.24218835}
+    m_Value: {x: -0.15515119, y: -0.052492287, z: 0.008291631, w: -0.9865008}
   m_Size:
-    m_Target: 1.4907321
+    m_Target: 2.5348172
     speed: 2
-    m_Value: 6.970168
+    m_Value: 2.6758678
   m_Ortho:
     m_Target: 1
     speed: 2
