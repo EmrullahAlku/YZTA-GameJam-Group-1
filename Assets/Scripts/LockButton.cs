@@ -1,38 +1,25 @@
-using System.Linq;
+
+using System.Linq; // Linq kütüphanesi
+
 using UnityEngine;
-
-namespace LockButtonScript
+namespace LockButtonScript {
+public class LockButton : MonoBehaviour
 {
-    public class LockButton : MonoBehaviour
+    public bool isLocked;
+
+
+    public GameObject Door;
+
+    public void UnlockDoor()
     {
-        public bool isLocked = true;
-        public bool redKey = false;
-        public GameObject Door;
-
-        public void UnlockDoor()
-        {
-            if (!isLocked)
-            {
-                Door.GetComponent<DoorScript.Door>().OpenDoor();
-            }
-            else if (redKey)
-            {
-                isLocked = false;
-                Door.GetComponent<DoorScript.Door>().OpenDoor();
-            }
-            else
-            {
-                Debug.Log("Kapı kilitli! Anahtar veya şifre gerekli.");
-            }
+        if (!isLocked) {
+            Door.GetComponent<DoorScript.Door>().OpenDoor();
         }
-
-        void Update()
+        if (isLocked)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                UnlockDoor();
-            }
+            isLocked = !isLocked;
         }
     }
 }
 
+}
