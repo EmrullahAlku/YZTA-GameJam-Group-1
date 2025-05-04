@@ -15,7 +15,7 @@ public class PasswordChecker : MonoBehaviour
 
         if (input == correctPassword)
         {
-            resultText.text = "Tebrikler, kazandınız!";
+            resultText.text = "Giriş başarılı!";
             resultText.color = Color.green;
         }
         else
