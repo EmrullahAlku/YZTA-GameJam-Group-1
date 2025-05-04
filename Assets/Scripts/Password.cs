@@ -18,13 +18,12 @@ namespace LockButtonScript
 
         void OpenPasswordPrompt()
         {
-            // �leride al�nacak password
             string enteredPassword = "1234";
 
             if (enteredPassword == correctPassword)
             {
                 Debug.Log("Password correct. Unlocking...");
-                lockButton.redKey = true;
+                lockButton.password = true;
                 lockButton.UnlockDoor();
             }
             else

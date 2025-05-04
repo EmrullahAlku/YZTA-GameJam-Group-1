@@ -6,7 +6,7 @@ namespace LockButtonScript
     public class LockButtonPassword : MonoBehaviour
     {
         public bool isLocked = true;
-        public bool redKey = false;
+        public bool password = false;
         public GameObject Door;
 
         public void UnlockDoor()
@@ -15,7 +15,7 @@ namespace LockButtonScript
             {
                 Door.GetComponent<DoorScript.Door>().OpenDoor();
             }
-            else if (redKey)
+            else if (password)
             {
                 isLocked = false;
                 Door.GetComponent<DoorScript.Door>().OpenDoor();
