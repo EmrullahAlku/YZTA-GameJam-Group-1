@@ -4,7 +4,7 @@ namespace LockButtonScript
 {
     public class PasswordPanel : MonoBehaviour
     {
-        public LockButton lockButton;
+        public LockButtonPassword lockButton;
         public string correctPassword = "1234";
         private bool playerInRange = false;
 
@@ -18,13 +18,12 @@ namespace LockButtonScript
 
         void OpenPasswordPrompt()
         {
-            // Ýleride alýnacak password
             string enteredPassword = "1234";
 
             if (enteredPassword == correctPassword)
             {
                 Debug.Log("Password correct. Unlocking...");
-                lockButton.redKey = true;
+                lockButton.password = true;
                 lockButton.UnlockDoor();
             }
             else
