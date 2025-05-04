@@ -30,6 +30,19 @@ public class PlayerInventory : MonoBehaviour
         
     }
 
+    public void RemoveItem(Items itemToDelete)
+    {
+        for (int i = 0; i < inventory.Length; i++)
+        {
+            if (inventory[i] == itemToDelete)
+            {
+                inventory[i] = Items.empty; // Set the slot to empty
+                break;
+            }
+        }
+        inventoryUI.UpdateInventoryUI(inventory); // Update the UI after deletion
+    }
+
 }
 
 public enum Items

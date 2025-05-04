@@ -1637,22 +1637,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5794676843095039511, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
   m_PrefabInstance: {fileID: 2083753194}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &396331508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396331505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 731917776111cfd4e8e238be7a676f44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: 0
-  LockButton: {fileID: 1940093957}
-  smooth: 1
-  autoCloseDelay: 5
 --- !u!82 &396331509
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1750,6 +1734,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &396331513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396331505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f463b2a7646d6e429818e8be40e4a0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  LockButton: {fileID: 1940093957}
+  smooth: 1
+  autoCloseDelay: 3
 --- !u!1 &401848498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,7 +2542,7 @@ PrefabInstance:
       addedObject: {fileID: 1940093961}
     - targetCorrespondingSourceObject: {fileID: 8241215707167654813, guid: e8a5a30daf68bc74bad60a691ec0b17a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1940093960}
+      addedObject: {fileID: 1940093965}
   m_SourcePrefab: {fileID: 100100000, guid: e8a5a30daf68bc74bad60a691ec0b17a, type: 3}
 --- !u!4 &542327932 stripped
 Transform:
@@ -2946,7 +2946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 1
-  redKey: 1
+  hasRedCard: 0
   Door: {fileID: 233397005}
 --- !u!1001 &708318379
 PrefabInstance:
@@ -3632,7 +3632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
-  redKey: 1
+  hasRedCard: 0
   Door: {fileID: 1872655187}
 --- !u!1 &946146370 stripped
 GameObject:
@@ -3674,7 +3674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
-  redKey: 1
+  hasRedCard: 0
   Door: {fileID: 835580076}
 --- !u!1001 &967292298
 PrefabInstance:
@@ -4694,7 +4694,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e0e3f8d74ee62094ab3af155332cd302, type: 2}
+  - {fileID: 2100000, guid: 141114d6d59312148a6aeb1019e0f55f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6066,7 +6066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
-  redKey: 1
+  hasRedCard: 0
   Door: {fileID: 1484728781}
 --- !u!1 &1509577022 stripped
 GameObject:
@@ -7051,7 +7051,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1788809114
+--- !u!114 &1788809118
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7060,7 +7060,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788809108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 731917776111cfd4e8e238be7a676f44, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d83a18b4fc2d5243825a5cf54e7157e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
@@ -8075,21 +8075,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8241215707167654813, guid: e8a5a30daf68bc74bad60a691ec0b17a, type: 3}
   m_PrefabInstance: {fileID: 542327931}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1940093960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940093957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d5931d10a83814893298252583f867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocked: 1
-  redKey: 1
-  Door: {fileID: 396331505}
 --- !u!65 &1940093961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8111,6 +8096,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0031221851, y: 0.00093788514, z: 0.0045482805}
   m_Center: {x: 0, y: -0.000011069395, z: 0.000000008383872}
+--- !u!114 &1940093965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940093957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c55a12421826add418484a9eb3cc2921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 1
+  hasRedCard: 0
+  Door: {fileID: 396331505}
+  player: {fileID: 206382220}
 --- !u!1001 &1944362781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8169,7 +8170,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8241215707167654813, guid: e8a5a30daf68bc74bad60a691ec0b17a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1944362786}
+      addedObject: {fileID: 1944362791}
     - targetCorrespondingSourceObject: {fileID: 8241215707167654813, guid: e8a5a30daf68bc74bad60a691ec0b17a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1944362787}
@@ -8179,21 +8180,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3584116041848226156, guid: e8a5a30daf68bc74bad60a691ec0b17a, type: 3}
   m_PrefabInstance: {fileID: 1944362781}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1944362786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834744868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d5931d10a83814893298252583f867, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocked: 1
-  redKey: 1
-  Door: {fileID: 1788809108}
 --- !u!65 &1944362787
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8215,6 +8201,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.005, y: 0.005, z: 0.0045482796}
   m_Center: {x: 0.000000029802322, y: 0, z: 0.0000000055879354}
+--- !u!114 &1944362791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834744868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae4543084385404398132a7942c2761, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 1
+  hasRedCard: 0
+  Door: {fileID: 1788809108}
+  player: {fileID: 206382220}
 --- !u!1 &1946507594 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 91041463465603817, guid: 74067999d9d1cfc4ab8662815242dda9, type: 3}
@@ -8336,9 +8338,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2571199384158689758, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1971093236}
-    - targetCorrespondingSourceObject: {fileID: 2571199384158689758, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1971093235}
     - targetCorrespondingSourceObject: {fileID: 8273090792777277764, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
       insertIndex: 2
       addedObject: {fileID: 492325025}
@@ -8362,7 +8361,7 @@ PrefabInstance:
       addedObject: {fileID: 1788809113}
     - targetCorrespondingSourceObject: {fileID: 5502501205754153022, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1788809114}
+      addedObject: {fileID: 1788809118}
   m_SourcePrefab: {fileID: 100100000, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
 --- !u!4 &1971093231 stripped
 Transform:
@@ -8391,22 +8390,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5551418225153903260, guid: b778dd5fe8c22ae40b82fb8eb42d98b5, type: 3}
---- !u!114 &1971093235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262735628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 731917776111cfd4e8e238be7a676f44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  open: 0
-  LockButton: {fileID: 0}
-  smooth: 1
-  autoCloseDelay: 3
 --- !u!82 &1971093236
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8811,7 +8794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 1
-  redKey: 1
+  hasRedCard: 0
   Door: {fileID: 2013360946}
 --- !u!1 &2058404801 stripped
 GameObject:
@@ -8904,7 +8887,7 @@ PrefabInstance:
       addedObject: {fileID: 396331509}
     - targetCorrespondingSourceObject: {fileID: 5794676843095039511, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 396331508}
+      addedObject: {fileID: 396331513}
   m_SourcePrefab: {fileID: 100100000, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
 --- !u!4 &2083753195 stripped
 Transform:
@@ -9578,7 +9561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
-  redKey: 1
+  hasRedCard: 0
   Door: {fileID: 190840055}
 --- !u!1001 &7775428973926574155
 PrefabInstance:
