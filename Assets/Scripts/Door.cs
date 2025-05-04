@@ -11,10 +11,7 @@ public class Door : MonoBehaviour {
 	public bool open;
 
 	public GameObject LockButton;
-	public float smooth = 1.0f;
-	float DoorOpenAngle = -90.0f;
-    float DoorCloseAngle = 0.0f;
-
+	public float smooth = 1.0f;	
 	public float autoCloseDelay = 3.0f;
 
 	private SkinnedMeshRenderer blendShape; 
