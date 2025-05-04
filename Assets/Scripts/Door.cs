@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
+
 namespace DoorScript
 {
-	[RequireComponent(typeof(AudioSource))]
-
-
-public class Door : MonoBehaviour {
+    [RequireComponent(typeof(AudioSource))]
+    public class Door : MonoBehaviour
+    {
         public bool open = false;                    
         public GameObject LockButton;                
         public float autoCloseDelay = 3.0f;          
-        private SkinnedMeshRenderer blendShape;      
+        public float smooth = 1.0f;
+
+        private SkinnedMeshRenderer blendShape;
 
         void Start()
         {
@@ -21,13 +22,17 @@ public class Door : MonoBehaviour {
 
         void Update()
         {
-          
             SetDoorKey(open ? 1 : 0);
         }
 
         public void OpenDoor()
         {
-            
+            if (LockButton == null)
+            {
+                Debug.LogWarning("LockButton GameObject atanmadı.");
+                return;
+            }
+
             var lockButton = LockButton.GetComponent<LockButtonScript.LockButton>();
 
             if (lockButton != null && !lockButton.isLocked)
@@ -46,7 +51,6 @@ public class Door : MonoBehaviour {
         {
             if (blendShape != null)
             {
-               
                 blendShape.SetBlendShapeWeight(0, value * 100);
             }
         }
@@ -58,5 +62,4 @@ public class Door : MonoBehaviour {
             GetComponent<Collider>().enabled = true;
         }
     }
-
 }
