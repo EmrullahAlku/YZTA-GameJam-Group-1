@@ -17,6 +17,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asus\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.render-pipelines.universal\\Shaders\\Lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+
     }
   ],
   "DocumentGroupContainers": [
@@ -26,6 +27,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -44,6 +46,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+
               "Title": "LockButton.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\Assets\\Scripts\\LockButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LockButton.cs",
@@ -57,6 +60,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+
               "Title": "Door.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Belgeler\\GitHub\\YZTA-GameJam-Group-1\\Assets\\Scripts\\Door.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Door.cs",
