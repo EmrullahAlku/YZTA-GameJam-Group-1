@@ -84,37 +84,24 @@ public class PlayerInventory : MonoBehaviour
         inventoryUI.UpdateInventoryUI(inventory); // Update the UI after deletion
     }
 
-    public void Save()
+    public void Save(ref PlayerSaveData data)
     {
-        PlayerSaveData saveData = new PlayerSaveData
-        {
-            position = transform.position,
-            timeCounter = timeCounter,
-            inventory = inventory,
-            isRedCardUsed = isRedCardUsed,
-            isBlueCardUsed = isBlueCardUsed
-        };
-
-        string json = JsonUtility.ToJson(saveData);
-        System.IO.File.WriteAllText(Application.persistentDataPath + "/playerSaveData.json", json);
+        data.position = transform.position; // Save the player's position
+        data.timeCounter = timeCounter; // Save the time counter
+        data.inventory = inventory; // Save the inventory items
+        data.isRedCardUsed = isRedCardUsed; // Save red card status
+        data.isBlueCardUsed = isBlueCardUsed; // Save blue card status
     }
 
-    public void Load()
+    public void Load(PlayerSaveData data)
     {
-        string path = Application.persistentDataPath + "/playerSaveData.json";
-        if (System.IO.File.Exists(path))
-        {
-            string json = System.IO.File.ReadAllText(path);
-            PlayerSaveData saveData = JsonUtility.FromJson<PlayerSaveData>(json);
+        transform.position = data.position; // Load the player's position
+        timeCounter = data.timeCounter; // Load the time counter
+        inventory = data.inventory; // Load the inventory items
+        isRedCardUsed = data.isRedCardUsed; // Load red card status
+        isBlueCardUsed = data.isBlueCardUsed; // Load blue card status
 
-            transform.position = saveData.position;
-            timeCounter = saveData.timeCounter;
-            inventory = saveData.inventory;
-            isRedCardUsed = saveData.isRedCardUsed;
-            isBlueCardUsed = saveData.isBlueCardUsed;
-
-            inventoryUI.UpdateInventoryUI(inventory); // Update the UI after loading
-        }
+        inventoryUI.UpdateInventoryUI(inventory); // Update the UI after loading
     }
 
 }
