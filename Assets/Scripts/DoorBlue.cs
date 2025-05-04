@@ -7,7 +7,7 @@ namespace DoorScript
 	[RequireComponent(typeof(AudioSource))]
 
 
-public class Door : MonoBehaviour {
+public class DoorBlue: MonoBehaviour {
 	public bool open;
 
 	public GameObject LockButton;
@@ -40,7 +40,7 @@ public class Door : MonoBehaviour {
 
 	public void OpenDoor(){
 
-		if ( LockButton == null || !LockButton.GetComponent<LockButtonScript.LockButton>().isLocked) {
+		if ( LockButton == null || !LockButton.GetComponent<LockButtonScript.LockButtonBlue>().isLocked) {
 			open = true;
 			GetComponent<Collider>().enabled = false;
 			//asource.clip = open?openDoor:closeDoor;
