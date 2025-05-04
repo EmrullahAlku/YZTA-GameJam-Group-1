@@ -14,19 +14,45 @@ public class ControlScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		RaycastHit hit;
-		if (Physics.Raycast (transform.position, transform.forward, out hit, DistanceOpen)) {
-            if (hit.transform.GetComponent<LockButtonScript.LockButton> ()) {
-				if (Input.GetKeyDown(KeyCode.E)) {
-					hit.transform.GetComponent<LockButtonScript.LockButton> ().UnlockDoor ();
+		if (Physics.Raycast(transform.position, transform.forward, out hit, DistanceOpen)) {
+			if (Input.GetKeyDown(KeyCode.E)) {
+				var lockButton = hit.transform.GetComponent<LockButtonScript.LockButton>();
+				if (lockButton != null) {
+					lockButton.UnlockDoor();
+					return;
+				}
+
+				var lockButtonRed = hit.transform.GetComponent<LockButtonScript.LockButtonRed>();
+				if (lockButtonRed != null) {
+					lockButtonRed.UnlockDoor();
+					return;
+				}
+
+				var lockButtonBlue = hit.transform.GetComponent<LockButtonScript.LockButtonBlue>();
+				if (lockButtonBlue != null) {
+					lockButtonBlue.UnlockDoor();
+					return;
+				}
+
+				var door = hit.transform.GetComponent<DoorScript.Door>();
+				if (door != null) {
+					door.OpenDoor();
+					return;
+				}
+
+				var doorRed = hit.transform.GetComponent<DoorScript.DoorRed>();
+				if (doorRed != null) {
+					doorRed.OpenDoor();
+					return;
+				}
+
+				var doorBlue = hit.transform.GetComponent<DoorScript.DoorBlue>();
+				if (doorBlue != null) {
+					doorBlue.OpenDoor();
+					return;
 				}
 			}
-			else if (hit.transform.GetComponent<DoorScript.Door> ()) {
-				if (Input.GetKeyDown(KeyCode.E))
-					hit.transform.GetComponent<DoorScript.Door> ().OpenDoor();
-				}
-				
-			}
-		
+		}
 	}
 }
 }
