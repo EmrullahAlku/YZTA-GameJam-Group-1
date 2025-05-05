@@ -14,7 +14,6 @@ public class Puzzle1Transition : MonoBehaviour
         if (playerInRange && Input.GetKeyDown(KeyCode.Return))
         {   
             isPuzzleCompleted = false; // Bulmacanın tamamlanma durumunu sıfırla
-                // sceneToLoad değerine göre ilgili bulmaca tamamlanma durumunu güncelle
                 switch (sceneToLoad)
                 {
                     case 1:
@@ -60,8 +59,7 @@ public class Puzzle1Transition : MonoBehaviour
 
             player.GetComponent<FirstPersonController>().PlayerFreeze(); // Oyuncunun hareketini durdur
             player.GetComponent<FirstPersonController>().UnlockCursor();
-             // Geçiş animasyonunu başlatmak için nesneyi etkinleştir
-            SceneManager.LoadScene(sceneToLoad); // Geçiş yapmak istediğiniz sahnenin adını yazın
+            SceneManager.LoadScene(sceneToLoad);
             } else{
                 Debug.Log("Puzzle is already completed. Cannot transition to the next scene.");
             }
@@ -70,8 +68,7 @@ public class Puzzle1Transition : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        // Oyuncu alana girdiğinde
-        if (other.CompareTag("Player")) // Oyuncunun "Player" tag'ine sahip olduğunu kontrol edin
+        if (other.CompareTag("Player"))
         {
             playerInRange = true;
             player = GameManager.Instance.player;
