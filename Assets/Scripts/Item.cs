@@ -6,7 +6,6 @@ public class Item : MonoBehaviour
 {
     public Items itemType = Items.redCard;
 
-
     void Start()
     {
         this.gameObject.SetActive(true); 
