@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class PlayerAnimationController : MonoBehaviour
 {
    
@@ -36,4 +37,3 @@ public class PlayerAnimationController : MonoBehaviour
             animator.SetBool("Running", false);  
         }
     }
-}

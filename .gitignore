@@ -9,7 +9,6 @@
 /[Uu]ser[Ss]ettings/
 
 .vs/
-"UserSettings/"
 # Visual Studio / Rider Generated Files
 .vscode/
 *.csproj
