@@ -959,8 +959,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!1 &190840055 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3838844503759606177, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
@@ -980,8 +980,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 245010485}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!82 &190840059
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1502,6 +1502,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8273090792777277764, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
   m_PrefabInstance: {fileID: 753427758}
   m_PrefabAsset: {fileID: 0}
+
+--- !u!114 &233397009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233397005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731917776111cfd4e8e238be7a676f44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  open: 0
+  LockButton: {fileID: 697121904}
+  autoCloseDelay: 3
+  smooth: 1
+
 --- !u!82 &233397010
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1949,8 +1967,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!82 &299658429
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2545,8 +2563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!1 &385876991 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2571199384158689758, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
@@ -3944,8 +3962,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!1001 &501270009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4172,8 +4190,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!1 &527701410 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4459864851508666809, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -4353,8 +4371,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!82 &576560843
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4962,7 +4980,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 1
+
+  redKey: 0
+
   passwordUI: {fileID: 1149934354}
+
   Door: {fileID: 233397005}
   correctPassword: 4444
 --- !u!1001 &708318379
@@ -6267,10 +6289,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
+
+  LockButton: {fileID: 946146370}
+  autoCloseDelay: 3
+  smooth: 1
+--- !u!1 &869762466 stripped
+
   LockButton: {fileID: 0}
   smooth: 1
   autoCloseDelay: 3
 --- !u!1 &843531305
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6565,6 +6594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
+  redKey: 0
   Door: {fileID: 1872655187}
 --- !u!1001 &926354061
 PrefabInstance:
@@ -6752,12 +6782,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 731917776111cfd4e8e238be7a676f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+  isLocked: 0
+  redKey: 0
+  Door: {fileID: 835580076}
+--- !u!1001 &960543272
+PrefabInstance:
+
   open: 0
   LockButton: {fileID: 0}
   smooth: 1
   autoCloseDelay: 3
 --- !u!82 &939306523
 AudioSource:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8023,8 +8061,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+
+  smooth: 1
+
 --- !u!1001 &1141597446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8190,6 +8230,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149934352}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1151577213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2571199384158689758, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
@@ -9113,8 +9154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!82 &1288464575
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9577,8 +9618,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!1 &1345701038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 91041463465603817, guid: 74067999d9d1cfc4ab8662815242dda9, type: 3}
@@ -10099,8 +10140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!1 &1459686781 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5794676843095039511, guid: c6375db9a50294e448a1380b8f85ec6e, type: 3}
@@ -10120,8 +10161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!82 &1459686786
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10339,9 +10380,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
+
+  LockButton: {fileID: 1508516685}
+
   LockButton: {fileID: 0}
   smooth: 1
+
   autoCloseDelay: 3
+  smooth: 1
 --- !u!1 &1493619492 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 91041463465603817, guid: 74067999d9d1cfc4ab8662815242dda9, type: 3}
@@ -10419,6 +10465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
+  redKey: 0
   Door: {fileID: 1484728781}
 --- !u!1 &1509577022 stripped
 GameObject:
@@ -12691,6 +12738,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+
+  open: 0
+  LockButton: {fileID: 0}
+  autoCloseDelay: 3
+  smooth: 1
+--- !u!82 &1871284940
+AudioSource:
+
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -12842,6 +12897,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1850552898
 GameObject:
+
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -13270,6 +13326,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
+
+  LockButton: {fileID: 921879773}
+  autoCloseDelay: 3
+  smooth: 1
+
   LockButton: {fileID: 0}
   smooth: 1
   autoCloseDelay: 3
@@ -13409,6 +13470,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873303674}
   m_CullTransparentMesh: 1
+
 --- !u!1 &1874228909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8241215707167654813, guid: e8a5a30daf68bc74bad60a691ec0b17a, type: 3}
@@ -13755,8 +13817,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   open: 0
   LockButton: {fileID: 0}
-  smooth: 1
   autoCloseDelay: 3
+  smooth: 1
 --- !u!82 &1924591910
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14626,10 +14688,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   open: 0
+
+  LockButton: {fileID: 2053148689}
+  autoCloseDelay: 3
+  smooth: 1
+--- !u!82 &2013360951
+
   LockButton: {fileID: 0}
   smooth: 1
   autoCloseDelay: 3
 --- !u!82 &2046850342
+
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14801,7 +14870,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 1
+
+  redKey: 0
+
   passwordUI: {fileID: 408341993}
+
   Door: {fileID: 2013360946}
   correctPassword: 1234
 --- !u!1 &2058404801 stripped
@@ -16054,6 +16127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
+  redKey: 0
   Door: {fileID: 190840055}
 --- !u!1001 &7191345420308419548
 PrefabInstance:
