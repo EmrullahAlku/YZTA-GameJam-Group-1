@@ -6,32 +6,37 @@ namespace LockButtonScript
     public class LockButtonPassword : MonoBehaviour
     {
         public bool isLocked = true;
-        public bool password = false;
+        public PasswordUI passwordUI; // PasswordUI scriptine referans
+        private bool playerInRange = false;
         public GameObject Door;
+
+        public string correctPassword; // Doğru şifre
 
         public void UnlockDoor()
         {
-            if (!isLocked)
-            {
-                Door.GetComponent<DoorScript.Door>().OpenDoor();
-            }
-            else if (password)
-            {
-                isLocked = false;
-                Door.GetComponent<DoorScript.Door>().OpenDoor();
-            }
-            else
-            {
-                Debug.Log("Kapı kilitli! Anahtar veya şifre gerekli.");
-            }
+            isLocked = false;
+            Door.GetComponent<DoorScript.DoorPassword>().OpenDoor();
         }
 
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (playerInRange && Input.GetKeyDown(KeyCode.E))
             {
-                UnlockDoor();
+                passwordUI.OpenPasswordPanel();
             }
         }
+
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Player"))
+                playerInRange = true;
+        }
+
+        void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player"))
+                playerInRange = false;
+        }
     }
-}
+
+    }
