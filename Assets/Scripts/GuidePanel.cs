@@ -13,15 +13,12 @@ public class GuidePanel : MonoBehaviour
     {
  
         if (panel != null)
- 
 
         {
             panel.SetActive(true); // oyun başında göster
         }
  
-
         else
- 
 
         {
 
