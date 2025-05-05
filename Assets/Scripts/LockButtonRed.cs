@@ -17,9 +17,9 @@ public class LockButtonRed : MonoBehaviour
         hasRedCard = player.GetComponent<PlayerInventory>().inventory.Contains(Items.redCard);
 
         Debug.Log("Has Red Card: " + hasRedCard); // Debug log to check if the player has the red card
-        if(!isLocked) {
+        if(!isLocked && player.GetComponent<PlayerInventory>().isRedCardUsed) {
             Door.GetComponent<DoorScript.DoorRed>().OpenDoor();
-        } else if (isLocked && hasRedCard)
+        } else if (hasRedCard)
         {
             isLocked = false;
             Door.GetComponent<DoorScript.DoorRed>().OpenDoor();

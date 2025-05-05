@@ -131,6 +131,8 @@ public class FirstPersonController : MonoBehaviour
 
     #endregion
 
+
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -147,6 +149,18 @@ public class FirstPersonController : MonoBehaviour
             sprintRemaining = sprintDuration;
             sprintCooldownReset = sprintCooldown;
         }
+
+
+    }
+    Vector3 beforeTransform;
+    public void PlayerFreeze()
+    {
+        beforeTransform = this.transform.position;
+    }
+
+    public void PlayerUnFreeze()
+    {
+        this.transform.position = beforeTransform;
     }
 
     void Start()
@@ -198,6 +212,15 @@ public class FirstPersonController : MonoBehaviour
         #endregion
     }
 
+    public void UnlockCursor()
+    {      
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     float camRotation;
 
     private void Update()

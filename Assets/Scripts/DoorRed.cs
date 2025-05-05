@@ -15,6 +15,8 @@ public class DoorRed : MonoBehaviour {
 	public float autoCloseDelay = 3.0f;
 
 	private SkinnedMeshRenderer blendShape; 
+
+	public GameObject player;
 	
 	//public AudioSource asource;
 	//public AudioClip openDoor,closeDoor;
@@ -41,11 +43,17 @@ public class DoorRed : MonoBehaviour {
 	public void OpenDoor(){
 
 		if ( LockButton == null || !LockButton.GetComponent<LockButtonScript.LockButtonRed>().isLocked) {
-			open = true;
-			GetComponent<Collider>().enabled = false;
-			//asource.clip = open?openDoor:closeDoor;
-			//asource.Play ();
-			StartCoroutine(AutoCloseDoor());
+			if (player.GetComponent<PlayerInventory>().isRedCardUsed) {
+				open = true;
+				GetComponent<Collider>().enabled = false;
+				//asource.clip = open?openDoor:closeDoor;
+				//asource.Play ();
+				StartCoroutine(AutoCloseDoor());
+			}
+			else {
+				Debug.Log ("Player does not have a red card");
+			}
+			
 		}
 		else {
 			Debug.Log ("Door is Locked");

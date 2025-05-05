@@ -1,48 +1,67 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using System; // TextMeshPro kütüphanesini ekleyin
 
-namespace LockButtonScript
+public class PasswordUI : MonoBehaviour
 {
-    public class PasswordPanel : MonoBehaviour
+    public GameObject passwordPanel; // Şifre giriş paneli
+    public TMP_InputField passwordInputField; // Şifreyi girmek için Input Field
+    public Button submitButton; // Şifreyi onaylamak için Button
+    public GameObject lockButton; // LockButtonPassword scriptine referans
+    private string correctPassword; // Doğru şifre
+
+    public GameObject Player; // Oyuncu referansı
+
+    private void Start()
     {
-        public LockButton lockButton;
-        public string correctPassword = "1234";
-        private bool playerInRange = false;
+        // Panel başlangıçta gizli
+        passwordPanel.SetActive(false);
 
-        void Update()
-        {
-            if (playerInRange && Input.GetKeyDown(KeyCode.E))
-            {
-                OpenPasswordPrompt();
-            }
+        // Butona tıklama olayını bağla
+        submitButton.onClick.AddListener(CheckPassword);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            ClosePasswordPanel(); // Escape tuşuna basıldığında paneli kapat
         }
-
-        void OpenPasswordPrompt()
-        {
-            // �leride al�nacak password
-            string enteredPassword = "1234";
-
-            if (enteredPassword == correctPassword)
-            {
-                Debug.Log("Password correct. Unlocking...");
-                lockButton.redKey = true;
-                lockButton.UnlockDoor();
-            }
-            else
-            {
-                Debug.Log("Wrong password!");
-            }
+        if (Input.GetKeyDown(KeyCode.Return)){
+            CheckPassword(); // Enter tuşuna basıldığında şifreyi kontrol et
         }
+    }
 
-        void OnTriggerEnter(Collider other)
+    public void OpenPasswordPanel()
+    {
+        passwordPanel.SetActive(true); // Paneli göster
+        Player.GetComponent<FirstPersonController>().enabled = false; // Oyuncunun hareketini durdur
+        passwordInputField.ActivateInputField();
+    }
+
+    public void ClosePasswordPanel()
+    {
+        passwordPanel.SetActive(false); // Paneli gizle
+        Player.GetComponent<FirstPersonController>().enabled = true; // Oyuncunun hareketini tekrar başlat
+        passwordInputField.text = ""; // Input field'ı temizle
+    }
+
+    private void CheckPassword()
+    {
+        string enteredPassword = passwordInputField.text; // Kullanıcının girdiği şifre
+        correctPassword = lockButton.GetComponent<LockButtonScript.LockButtonPassword>().correctPassword; // Doğru şifreyi al
+        Debug.Log("Entered Password: " + enteredPassword);
+        Debug.Log("Correct Password: " + correctPassword); // Doğru şifreyi kontrol et
+        
+        if (enteredPassword == correctPassword)
         {
-            if (other.CompareTag("Player"))
-                playerInRange = true;
+            Debug.Log("Password correct. Unlocking...");
+            lockButton.GetComponent<LockButtonScript.LockButtonPassword>().UnlockDoor(); // Kapıyı aç
+            ClosePasswordPanel(); // Paneli kapat
         }
-
-        void OnTriggerExit(Collider other)
+        else
         {
-            if (other.CompareTag("Player"))
-                playerInRange = false;
+            Debug.Log("Wrong password!");
         }
     }
 }

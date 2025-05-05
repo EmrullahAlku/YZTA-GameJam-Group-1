@@ -15,6 +15,7 @@ public class DoorBlue: MonoBehaviour {
 	public float autoCloseDelay = 3.0f;
 
 	private SkinnedMeshRenderer blendShape; 
+	public GameObject player;
 	
 	//public AudioSource asource;
 	//public AudioClip openDoor,closeDoor;
@@ -41,11 +42,16 @@ public class DoorBlue: MonoBehaviour {
 	public void OpenDoor(){
 
 		if ( LockButton == null || !LockButton.GetComponent<LockButtonScript.LockButtonBlue>().isLocked) {
-			open = true;
-			GetComponent<Collider>().enabled = false;
-			//asource.clip = open?openDoor:closeDoor;
-			//asource.Play ();
-			StartCoroutine(AutoCloseDoor());
+			if (player.GetComponent<PlayerInventory>().isBlueCardUsed) {
+				open = true;
+				GetComponent<Collider>().enabled = false;
+				//asource.clip = open?openDoor:closeDoor;
+				//asource.Play ();
+				StartCoroutine(AutoCloseDoor());
+			}
+			else {
+				Debug.Log ("Player does not have a blue card");
+			}
 		}
 		else {
 			Debug.Log ("Door is Locked");

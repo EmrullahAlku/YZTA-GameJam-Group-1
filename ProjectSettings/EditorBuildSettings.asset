@@ -5,9 +5,33 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level 1.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/1.unity
+    guid: 9540bc49046ecbe41a936d3a214967a1
+  - enabled: 1
+    path: Assets/Scenes/TaskScene/Task1.unity
+    guid: 30a4422a723e8d248b4d1a4cf8166964
+  - enabled: 1
+    path: Assets/Scenes/Puzzle2DScene.unity
+    guid: 8854758cc8ca265458eafafaa571aa21
+  - enabled: 1
+    path: Assets/Scenes/TaskScene/Task3.unity
+    guid: 56a4f83c287669245b5710132283efad
+  - enabled: 1
+    path: Assets/Scenes/RingRotator.unity
+    guid: 8f456a27bc03ff9428eb3ef5f85df04b
+  - enabled: 1
+    path: Assets/Scenes/TaskScene/Task4.unity
+    guid: dfe5e8f3f3a98b7469c277dfed10d33c
+  - enabled: 1
+    path: Assets/Scenes/TaskScene/Task2.unity
+    guid: b1444413a9d084a4988dbb7948b144e9
+  - enabled: 1
+    path: Assets/Scenes/PasswordCheckerScene.unity
+    guid: 11a44089f80e8664f88404c648b12ec9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
