@@ -2933,11 +2933,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ab71222eeb44bdf468c5c395675e707b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.964
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ab71222eeb44bdf468c5c395675e707b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.648
+      value: 29.881
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ab71222eeb44bdf468c5c395675e707b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2988,15 +2988,13 @@ PrefabInstance:
       addedObject: {fileID: 408373661}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ab71222eeb44bdf468c5c395675e707b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 408373665}
+      addedObject: {fileID: 408373660}
   m_SourcePrefab: {fileID: 100100000, guid: ab71222eeb44bdf468c5c395675e707b, type: 3}
 --- !u!1 &408373659 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ab71222eeb44bdf468c5c395675e707b, type: 3}
   m_PrefabInstance: {fileID: 408373658}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!114 &408373660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,7 +3008,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemType: 1
->>>>>>> fb9faed87faac2aae4da93a53e26a028d3922993
 --- !u!65 &408373661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3032,21 +3029,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.01, z: 0.0025987502}
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!114 &408373665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 408373659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ad72ade7eea562418ea330d8200adcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemType: 1
-=======
 --- !u!1001 &418034727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3104,7 +3086,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff09c4b94656b449b473a0f28e06b16, type: 3}
->>>>>>> fb9faed87faac2aae4da93a53e26a028d3922993
 --- !u!1 &423695756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 91041463465603817, guid: 74067999d9d1cfc4ab8662815242dda9, type: 3}
