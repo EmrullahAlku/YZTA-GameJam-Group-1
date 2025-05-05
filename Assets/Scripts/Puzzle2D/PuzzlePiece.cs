@@ -8,6 +8,8 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     private Canvas canvas;
     private Vector3 originalPosition;
 
+    public GameObject PuzzleWin;
+
     private void Start()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -31,6 +33,7 @@ public class PuzzlePiece : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         if (distance < 50f)
         {
             rectTransform.position = correctPosition.position;
+            PuzzleWin.GetComponent<PuzzlePieceW>().PieceCounter(); // Puzzle tamamlandı
         }
         else
         {

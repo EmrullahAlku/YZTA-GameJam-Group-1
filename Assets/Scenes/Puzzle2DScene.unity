@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 1485468041}
+  PuzzleWin: {fileID: 584198535}
 --- !u!114 &121638532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 163286244}
+  PuzzleWin: {fileID: 584198535}
 --- !u!114 &368247147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,6 +618,7 @@ GameObject:
   - component: {fileID: 551464834}
   - component: {fileID: 551464833}
   - component: {fileID: 551464832}
+  - component: {fileID: 551464836}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -716,6 +719,64 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &551464836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551464831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde191b73eb96e44caced5106e9679ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pieceCount: 9
+--- !u!1 &584198535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584198537}
+  - component: {fileID: 584198536}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &584198536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584198535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde191b73eb96e44caced5106e9679ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pieceCount: 9
+--- !u!4 &584198537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584198535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &672614095
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 1246983789}
+  PuzzleWin: {fileID: 584198535}
 --- !u!114 &672614100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,6 +1195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 1988988836}
+  PuzzleWin: {fileID: 584198535}
 --- !u!114 &801304013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1260,6 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 1973018296}
+  PuzzleWin: {fileID: 584198535}
 --- !u!225 &1074714534
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1363,6 +1427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 2123691741}
+  PuzzleWin: {fileID: 584198535}
 --- !u!114 &1203374819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,7 +1571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.135}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.9468141, y: 1}
-  m_AnchoredPosition: {x: 24.514008, y: 0.5322876}
+  m_AnchoredPosition: {x: 24.514038, y: 0.5322876}
   m_SizeDelta: {x: 48.335, y: 1.1133}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299912440
@@ -2054,6 +2119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 707325964}
+  PuzzleWin: {fileID: 584198535}
 --- !u!114 &2050097323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2169,6 +2235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 136630708}
+  PuzzleWin: {fileID: 584198535}
 --- !u!114 &2123023384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2359,6 +2426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: {fileID: 1694408056}
+  PuzzleWin: {fileID: 584198535}
 --- !u!114 &2142110803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2390,3 +2458,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 551464835}
   - {fileID: 1485917410}
+  - {fileID: 584198537}

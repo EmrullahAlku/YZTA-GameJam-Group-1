@@ -35,12 +35,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Keyboard.current.numpad0Key.wasPressedThisFrame)
+        if (Keyboard.current.kKey.wasPressedThisFrame)
         {
             SaveSystem.Save();
             Debug.Log("Game Saved");
         }
-        if (Keyboard.current.numpad1Key.wasPressedThisFrame)
+        if (Keyboard.current.lKey.wasPressedThisFrame)
         {
             SaveSystem.Load();
             Debug.Log("Game Loaded");

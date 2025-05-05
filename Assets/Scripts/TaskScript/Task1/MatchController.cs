@@ -8,17 +8,18 @@ public class MatchController : MonoBehaviour
     public Image frontImage;
     public string cardId;
 
+    public GameObject task; // Kartï¿½n parent objesi
     private static MatchController firstCard = null;
     private static MatchController secondCard = null;
     private static bool isChecking = false;
 
     public void OnClick()
     {
-        // Eðer kart açýk ya da kontrol süreci varsa týklamayý engelle
+        // Eï¿½er kart aï¿½ï¿½k ya da kontrol sï¿½reci varsa tï¿½klamayï¿½ engelle
         if (frontImage.gameObject.activeSelf || isChecking)
             return;
 
-        // Kartý aç
+        // Kartï¿½ aï¿½
         frontImage.gameObject.SetActive(true);
         backImage.gameObject.SetActive(false);
 
@@ -40,14 +41,16 @@ public class MatchController : MonoBehaviour
 
         if (firstCard.cardId == secondCard.cardId)
         {
-            // Eþleþiyorsa parent objeleri sil
+            // Eï¿½leï¿½iyorsa parent objeleri sil
             Destroy(firstCard.gameObject);
             Destroy(secondCard.gameObject);
+            task.GetComponent<Task1W>().CardCounter();
+
         }
         else
         {
-            // Eþleþmiyorsa kartlarý kapat
-            yield return new WaitForSeconds(0.5f); // oyuncuya gösterme süresi
+            // Eï¿½leï¿½miyorsa kartlarï¿½ kapat
+            yield return new WaitForSeconds(0.5f); // oyuncuya gï¿½sterme sï¿½resi
 
             firstCard.frontImage.gameObject.SetActive(false);
             firstCard.backImage.gameObject.SetActive(true);
@@ -56,7 +59,7 @@ public class MatchController : MonoBehaviour
             secondCard.backImage.gameObject.SetActive(true);
         }
 
-        // Sýfýrlama
+        // Sï¿½fï¿½rlama
         firstCard = null;
         secondCard = null;
         isChecking = false;

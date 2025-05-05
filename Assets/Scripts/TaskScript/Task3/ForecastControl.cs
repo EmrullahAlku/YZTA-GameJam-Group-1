@@ -1,39 +1,40 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ForecastControl : MonoBehaviour
 {
-    public TMP_Text messageText;  // Oyuncuya mesajý gösterecek Text
-    public InputField inputField;  // Oyuncunun tahminini yazacaðý InputField
-    public Button submitButton;  // Tahmin yapýlacak Button
+    public TMP_Text messageText;  // Oyuncuya mesajï¿½ gï¿½sterecek Text
+    public InputField inputField;  // Oyuncunun tahminini yazacaï¿½ï¿½ InputField
+    public Button submitButton;  // Tahmin yapï¿½lacak Button
 
     private int secretNumber;
 
 
     void Start()
     {
-        // Oyunu baþlat
+        // Oyunu baï¿½lat
         StartGame();
     }
 
     void StartGame()
     {
-        secretNumber = Random.Range(1, 101);  // 1 ile 100 arasýnda rastgele bir sayý
+        secretNumber = Random.Range(1, 101);  // 1 ile 100 arasï¿½nda rastgele bir sayï¿½
 
-        UpdateUI("Tahmin Et: 1 ile 100 arasýnda bir sayý girin.");
+        UpdateUI("Tahmin Et: 1 ile 100 arasï¿½nda bir sayï¿½ girin.");
     }
 
     public void CheckGuess()
     {
-        string userInput = inputField.text.Trim(); // Boþluklarý temizle
+        string userInput = inputField.text.Trim(); // Boï¿½luklarï¿½ temizle
 
-        // Giriþ deðerini kontrol et
-        Debug.Log("User Input: " + userInput);  // Kullanýcýnýn girdiði deðeri konsolda göster
+        // Giriï¿½ deï¿½erini kontrol et
+        Debug.Log("User Input: " + userInput);  // Kullanï¿½cï¿½nï¿½n girdiï¿½i deï¿½eri konsolda gï¿½ster
 
         if (string.IsNullOrEmpty(userInput))
         {
-            UpdateUI("Bir sayý girmeniz gerekiyor!");
+            UpdateUI("Bir sayï¿½ girmeniz gerekiyor!");
             return;
         }
 
@@ -42,22 +43,24 @@ public class ForecastControl : MonoBehaviour
         {
             if (userGuess == secretNumber)
             {
-                UpdateUI("Tebrikler! Doðru Tahmin: " + secretNumber);
+                UpdateUI("Tebrikler! Doï¿½ru Tahmin: " + secretNumber);
+                Invoke("changeScene", 2f); // DoÄŸru tahmin yapÄ±ldÄ±ÄŸÄ±nda sahneyi deÄŸiÅŸtir
+                
             }
             else if (userGuess < secretNumber)
             {
-                UpdateUI("Tahmininiz küçük. Tekrar deneyin.");
+                UpdateUI("Tahmininiz kï¿½ï¿½ï¿½k. Tekrar deneyin.");
             }
             else
             {
-                UpdateUI("Tahmininiz büyük. Tekrar deneyin.");
+                UpdateUI("Tahmininiz bï¿½yï¿½k. Tekrar deneyin.");
             }
 
-            inputField.text = "";  // Input field'ý sýfýrlama
+            inputField.text = "";  // Input field'ï¿½ sï¿½fï¿½rlama
         }
         else
         {
-            UpdateUI("Geçerli bir sayý girin!");
+            UpdateUI("Geï¿½erli bir sayï¿½ girin!");
         }
     }
 
@@ -65,6 +68,23 @@ public class ForecastControl : MonoBehaviour
 
     void UpdateUI(string message)
     {
-        messageText.text = message;  // Mesajý güncelle
+        messageText.text = message;  // Mesajï¿½ gï¿½ncelle
     }
+
+    void changeScene()
+    {
+        GameObject player = GameManager.Instance.player;
+            if (player != null)
+            {
+                player.GetComponent<PlayerInventory>().isPuzzle3Completed = true; // Puzzle tamamlandÄ±
+                player.GetComponent<FirstPersonController>().PlayerUnFreeze(); // Oyuncuyu dondur
+                player.GetComponent<FirstPersonController>().LockCursor(); // Oyuncuyu dondur
+                
+                Debug.Log("All cards used!");
+                SceneManager.LoadScene(0); // End sahnesini yÃ¼kle
+            }
+            else
+            {
+                Debug.LogError("Player reference is null in GameManager!");
+            }}
 }
