@@ -19,9 +19,18 @@ public class SaveSystem
     }
 
     public static void SaveFirst()
-    {
-        HandleSaveData();
-        File.WriteAllText(FirstSaveFileName(), JsonUtility.ToJson(_saveData, true));
+    {   
+        if (File.Exists(FirstSaveFileName()))
+        {
+            Debug.Log("First save file already exists. No need to create a new one.");
+        }
+        else
+        {
+            HandleSaveData();
+            File.WriteAllText(FirstSaveFileName(), JsonUtility.ToJson(_saveData, true));
+            Debug.Log($"First save file created: {FirstSaveFileName()}");
+        }
+        
     }
 
     private static void HandleSaveData()
