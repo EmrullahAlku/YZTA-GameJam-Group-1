@@ -4705,6 +4705,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3394802779628439272, guid: 74067999d9d1cfc4ab8662815242dda9, type: 3}
   m_PrefabInstance: {fileID: 629341916}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &637784445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 637784446}
+  - component: {fileID: 637784447}
+  m_Layer: 0
+  m_Name: RedCardStarterObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &637784446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637784445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &637784447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637784445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a97f7675b25d16c44b71fcbb96097f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemToActivate: {fileID: 408373659}
 --- !u!1 &650090869 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8241215707167654813, guid: e8a5a30daf68bc74bad60a691ec0b17a, type: 3}
@@ -16461,6 +16506,7 @@ SceneRoots:
   - {fileID: 1006236427}
   - {fileID: 1910920018}
   - {fileID: 401848501}
+  - {fileID: 637784446}
   - {fileID: 408373658}
   - {fileID: 501270009}
   - {fileID: 929855510}
