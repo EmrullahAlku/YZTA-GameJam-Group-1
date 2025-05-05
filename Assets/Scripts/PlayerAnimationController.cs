@@ -37,3 +37,4 @@ public class PlayerAnimationController : MonoBehaviour
             animator.SetBool("Running", false);  
         }
     }
+}
