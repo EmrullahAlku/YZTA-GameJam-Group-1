@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        SaveSystem.SaveFirst(); // İlk kaydı yap
     }
 
     // Update is called once per frame
